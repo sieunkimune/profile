@@ -13,6 +13,7 @@ $point-color-1: #ffc90e;
 $point-color-2: #fcf8e3;
 
 #wrap {
+	position: relative;
 	min-width: 1200px;
 
 	> .loading {
@@ -43,4 +44,62 @@ $point-color-2: #fcf8e3;
 			transform: translate(-50%, -50%);
 		}
 	} //end of loading
+
+	> h1 {
+		position: absolute;
+		left: 50%;
+		top: 160px;
+		z-index: 100;
+		color: $pri-color-3;
+		font-size: 24px;
+		text-transform: uppercase;
+		transform: translate(-50%, 0);
+		// border: 1px solid #000;
+	}
+
+	> #home {
+		overflow: hidden;
+		position: relative;
+
+		> .intro {
+			position: absolute;
+			left: 0;
+			top: 35%;
+			width: 100%;
+			text-align: center;
+			// border: 1px solid #fff;
+			> h2 {
+				color: $pri-color-2;
+				font-size: 60px;
+				line-height: 80px;
+
+				> span {
+					color: #7a3dc0;
+				}
+			} //end of h2
+
+			> p {
+				margin-top: 24px;
+				color: $pri-color-3;
+				line-height: 1.8;
+				letter-spacing: 1;
+			} //end of p
+		} //end of .intro
+
+		> .bgmov {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			width: 100%;
+
+			> video {
+				//부모한테 꽉 차게 하기 위해서
+				min-width: 100%;
+				min-height: 100%;
+			}
+		} //end of .bgmov
+	} //end of home
 } //end of #wrap

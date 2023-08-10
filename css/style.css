@@ -1,4 +1,5 @@
 #wrap {
+  position: relative;
   min-width: 1200px;
 }
 #wrap > .loading {
@@ -19,4 +20,52 @@
   text-indent: -9999px;
   background-image: url(./../images/loading.gif);
   transform: translate(-50%, -50%);
+}
+#wrap > h1 {
+  position: absolute;
+  left: 50%;
+  top: 160px;
+  z-index: 100;
+  color: #ffffff;
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: translate(-50%, 0);
+}
+#wrap > #home {
+  overflow: hidden;
+  position: relative;
+}
+#wrap > #home > .intro {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+}
+#wrap > #home > .intro > h2 {
+  color: #52b3d9;
+  font-size: 60px;
+  line-height: 80px;
+}
+#wrap > #home > .intro > h2 > span {
+  color: #7a3dc0;
+}
+#wrap > #home > .intro > p {
+  margin-top: 24px;
+  color: #ffffff;
+  line-height: 1.8;
+  letter-spacing: 1;
+}
+#wrap > #home > .bgmov {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+#wrap > #home > .bgmov > video {
+  min-width: 100%;
+  min-height: 100%;
 }/*# sourceMappingURL=style.css.map */
