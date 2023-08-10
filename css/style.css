@@ -1,0 +1,22 @@
+#wrap {
+  min-width: 1200px;
+}
+#wrap > .loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+#wrap > .loading > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  text-indent: -9999px;
+  background-image: url(./../images/loading.gif);
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=style.css.map */

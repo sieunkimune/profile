@@ -1,1 +1,46 @@
 @charset "UTF-8";
+
+//컬러시스템
+$pri-color-1: #2c3e50;
+$pri-color-2: #52b3d9;
+$pri-color-3: #ffffff;
+
+$sec-color-1: #68c3a3;
+$sec-color-2: #333333;
+$sec-color-3: #eeeeee;
+
+$point-color-1: #ffc90e;
+$point-color-2: #fcf8e3;
+
+#wrap {
+	min-width: 1200px;
+
+	> .loading {
+		// display: flex;
+		// justify-content: center;
+		// align-items: center; //얘도 아래 p에 po:a~trans랑 결과 같음
+
+		//브라우저 창에 요소를 꽉채우고 싶을 때
+		//아래처럼 po:f 후 l, r, t, b 0으로 다 주기
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1000;
+		background-color: $pri-color-3;
+		> p {
+			position: absolute; //
+			left: 50%; //
+			top: 50%; //
+
+			width: 64px;
+			height: 64px;
+			text-indent: -9999px;
+			background-image: url(./../images/loading.gif);
+
+			//중요!!본인 크기의 반 만큼 더 가야 딱 반임
+			transform: translate(-50%, -50%);
+		}
+	} //end of loading
+} //end of #wrap
