@@ -56,13 +56,41 @@
   line-height: 80px;
 }
 #wrap > #home > .intro > h2 > span {
-  color: #7a3dc0;
+  color: #55af61;
 }
 #wrap > #home > .intro > p {
   margin-top: 24px;
   color: #ffffff;
   line-height: 1.8;
   letter-spacing: 1;
+}
+#wrap > #home > .intro > .myico {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin: 40px auto 0;
+}
+#wrap > #home > .intro > .myico > span {
+  display: block;
+  width: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  transition: all 0.4s;
+}
+#wrap > #home > .intro > .myico > span:hover {
+  background-color: #52b3d9;
+  border-color: transparent;
+  cursor: pointer;
+}
+#wrap > #home > .intro > .myico > span > i {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  transform: rotate(-45deg);
 }
 #wrap > #home > .mouse {
   position: absolute;

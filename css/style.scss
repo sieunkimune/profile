@@ -82,7 +82,7 @@ $point-color-2: #fcf8e3;
 				line-height: 80px;
 
 				> span {
-					color: #7a3dc0;
+					color: #55af61;
 				}
 			} //end of h2
 
@@ -92,6 +92,36 @@ $point-color-2: #fcf8e3;
 				line-height: 1.8;
 				letter-spacing: 1;
 			} //end of p
+
+			> .myico {
+				display: flex;
+				justify-content: space-between;
+				width: 320px;
+				margin: 40px auto 0;
+				> span {
+					display: block;
+					width: 40px;
+					border: 1px solid $pri-color-3;
+					border-radius: 3px;
+					transform: rotate(45deg);
+					transition: all 0.4s;
+
+					&:hover {
+						background-color: $pri-color-2;
+						border-color: transparent;
+						cursor: pointer;
+					}
+					> i {
+						display: block;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						color: $pri-color-3;
+						font-size: 18px;
+						transform: rotate(-45deg);
+					}
+				}
+			} //end of .myico
 		} //end of .intro
 
 		> .mouse {
