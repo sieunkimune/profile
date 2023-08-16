@@ -34,6 +34,7 @@
 #wrap > #home {
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 #wrap > #home:before {
   display: block;
@@ -141,4 +142,71 @@
 #wrap > #home > .bgmov > video {
   min-width: 100%;
   min-height: 100%;
+}
+#wrap header {
+  width: 100%;
+  min-width: 1200px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+#wrap header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+#wrap header > .container {
+  position: relative;
+  height: 66px;
+}
+#wrap header > .container > h2 {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-image: url(./../images/logo.png);
+  background-repeat: no-repeat;
+}
+#wrap header > .container > h2 > a {
+  display: block;
+  height: 32px;
+  color: #2c3e50;
+  line-height: 32px;
+  text-indent: 40px;
+  text-transform: uppercase;
+}
+#wrap header > .container > nav {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#wrap header > .container > nav > .gnb {
+  display: flex;
+}
+#wrap header > .container > nav > .gnb > li > a {
+  display: block;
+  padding: 0 15px;
+  color: #3c3c3c;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+#wrap header > .container > nav > .gnb > li:hover > a, #wrap header > .container > nav > .gnb > li.on > a {
+  color: #52b3d9;
+}
+#wrap header ~ section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  text-transform: uppercase;
+}
+#wrap header ~ section:nth-of-type(odd) {
+  height: 500px;
+  background-color: skyblue;
+}
+#wrap header ~ section:nth-of-type(even) {
+  height: 800px;
+  background-color: pink;
 }/*# sourceMappingURL=style.css.map */
