@@ -18,10 +18,15 @@ $point-color-2: #fcf8e3;
 	transform: translate(0, -50%);
 }
 
+$mobile: 'screen and (max-width:640px)';
+
 #wrap {
 	position: relative;
 	min-width: 1200px;
 
+	@media #{$mobile} {
+		min-width: 100%;
+	}
 	> .loading {
 		// display: flex;
 		// justify-content: center;
@@ -54,7 +59,7 @@ $point-color-2: #fcf8e3;
 	> h1 {
 		position: absolute;
 		left: 50%;
-		top: 160px;
+		// top 값은 JS에서 동적으로 설정
 		z-index: 100;
 		color: $pri-color-3;
 		font-size: 24px;
@@ -68,6 +73,11 @@ $point-color-2: #fcf8e3;
 		position: relative;
 		transition: all 0.3s ease-in-out;
 
+		@media #{$mobile} {
+			background-image: url(./../images/visual.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
 		&:before {
 			display: block;
 			width: 100%;
@@ -83,13 +93,27 @@ $point-color-2: #fcf8e3;
 			width: 100%;
 			text-align: center;
 			// border: 1px solid #fff;
+
+			@media #{$mobile} {
+				top: 25%;
+				padding-bottom: 30px;
+			}
 			> h2 {
 				color: $pri-color-2;
 				font-size: 60px;
 				line-height: 80px;
 
+				@media #{$mobile} {
+					font-size: 38px;
+					line-height: 50px;
+				}
+
 				> span {
 					color: #55af61;
+
+					@media #{$mobile} {
+						display: block;
+					}
 				}
 			} //end of h2
 
@@ -98,6 +122,12 @@ $point-color-2: #fcf8e3;
 				color: $pri-color-3;
 				line-height: 1.8;
 				letter-spacing: 1;
+
+				> span {
+					@media #{$mobile} {
+						display: block;
+					}
+				}
 			} //end of p
 
 			> .myico {
@@ -105,6 +135,10 @@ $point-color-2: #fcf8e3;
 				justify-content: space-between;
 				width: 320px;
 				margin: 40px auto 0;
+
+				@media #{$mobile} {
+					margin-top: 80px;
+				}
 				> span {
 					display: block;
 					width: 40px;
@@ -141,6 +175,10 @@ $point-color-2: #fcf8e3;
 			box-sizing: border-box;
 			border-radius: 15px;
 			transform: translate(-50%, 0);
+
+			@media #{$mobile} {
+				display: none;
+			}
 
 			@keyframes mousewheel {
 				0% {
@@ -180,6 +218,9 @@ $point-color-2: #fcf8e3;
 			z-index: -1;
 			width: 100%;
 
+			@media #{$mobile} {
+				display: none;
+			}
 			> video {
 				//부모한테 꽉 차게 하기 위해서
 				min-width: 100%;
@@ -194,6 +235,9 @@ $point-color-2: #fcf8e3;
 		background-color: $pri-color-3;
 		border-bottom: 1px solid $sec-color-3;
 
+		@media #{$mobile} {
+			min-width: 100%;
+		}
 		&.fixed {
 			position: fixed;
 			left: 0;
@@ -224,13 +268,58 @@ $point-color-2: #fcf8e3;
 				}
 			}
 
+			//반응형 햄버거 버튼
+			> button {
+				display: none;
+
+				@media #{$mobile} {
+					background: none;
+					border: none;
+					outline: none;
+
+					display: block;
+					position: absolute;
+					right: 7%;
+					@include transTop;
+					width: 24px;
+					height: 18px;
+					text-indent: -9999px;
+					background-image: url(./../images/mnu_btn.png);
+					background-position: center center;
+					background-repeat: no-repeat;
+
+					&.clse {
+						background-image: url(./../images/clse_btn.png);
+					}
+				}
+			} //end of button
+
 			> nav {
 				position: absolute;
 				right: 7%;
 				@include transTop;
+
+				@media #{$mobile} {
+					// background-color: yellow;
+					display: none;
+					right: initial;
+					left: 0;
+					top: 66px;
+					width: 100%;
+					transform: initial; //
+					border-top: 1px solid $sec-color-3;
+				}
 				> .gnb {
 					display: flex;
+
+					@media #{$mobile} {
+						display: initial;
+					}
 					> li {
+						@media #{$mobile} {
+							background-color: $pri-color-3;
+							border-bottom: 1px solid $sec-color-3;
+						}
 						> a {
 							display: block;
 							padding: 0 15px;
@@ -238,6 +327,13 @@ $point-color-2: #fcf8e3;
 							font-weight: 500;
 							text-transform: uppercase;
 							transition: all 0.2s;
+
+							@media #{$mobile} {
+								height: 48px;
+								padding: 0;
+								line-height: 48px;
+								text-indent: 7%;
+							}
 						} //end of a
 
 						&:hover > a,
@@ -257,6 +353,9 @@ $point-color-2: #fcf8e3;
 		font-size: 150px;
 		text-transform: uppercase;
 
+		@media #{$mobile} {
+			font-size: 64px;
+		}
 		&:nth-of-type(odd) {
 			height: 500px;
 			background-color: skyblue;
@@ -266,4 +365,93 @@ $point-color-2: #fcf8e3;
 			background-color: pink;
 		}
 	}
+
+	> footer {
+		min-width: 1200px;
+
+		@media #{$mobile} {
+			width: 100%;
+		}
+		> .working {
+			border-top: 1px solid $sec-color-3;
+
+			> p {
+				height: 80px;
+				padding-left: 7%;
+				line-height: 80px;
+
+				> a {
+					margin: 0 30px;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			} //end of p
+		} //end of .working
+		> .info {
+			background-color: darken($sec-color-2, 10%);
+
+			> .container {
+				position: relative;
+				padding: 45px 7% 40px;
+
+				h2,
+				p {
+					margin-bottom: 15px;
+					color: #aaa;
+					font-size: 13px;
+
+					> a {
+						color: #aaa;
+					}
+					> .bar {
+						margin: 0 10px;
+					}
+				}
+
+				h2:after {
+					display: block;
+					position: absolute;
+					right: 7%;
+					@include transTop;
+
+					width: 53px;
+					height: 68px;
+					background-image: url(./../images/footer_logo.png);
+					content: '';
+
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+
+				@media #{$mobile} {
+					> p.iam_2 > span {
+						display: block;
+					}
+				}
+			} //end of .container
+		} //end of .info
+	} //end of footer
+
+	> aside {
+		display: none;
+		position: fixed;
+		right: 1rem; //rem은 무조건 16px
+		bottom: 1rem;
+		z-index: 1000;
+
+		> .top {
+			display: block;
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+			text-align: center;
+			background-color: $pri-color-2;
+			> i {
+				color: $pri-color-3;
+			}
+		} //end of .top
+	} //end of aside
 } //end of #wrap
