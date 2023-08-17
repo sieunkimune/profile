@@ -92,7 +92,6 @@ $(function () {
 		} //end of for
 
 		//탑버튼 노출 처리
-
 		if (scrollTop > 120) {
 			$aside.fadeIn();
 		} else {

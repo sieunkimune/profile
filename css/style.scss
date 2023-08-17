@@ -347,31 +347,171 @@ $mobile: 'screen and (max-width:640px)';
 	} //end of header
 
 	header ~ section {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 150px;
-		text-transform: uppercase;
+		padding-top: 80px;
 
-		@media #{$mobile} {
-			font-size: 64px;
-		}
-		&:nth-of-type(odd) {
-			height: 500px;
-			background-color: skyblue;
-		}
-		&:nth-of-type(even) {
-			height: 800px;
-			background-color: pink;
-		}
-	}
+		> h2 {
+			color: $pri-color-1;
+			font-size: 50px;
+			line-height: 50px;
+			text-align: center;
+
+			&:after {
+				display: block;
+				width: 138px;
+				height: 15px;
+				margin: 30px auto 0;
+				background-image: url(./../images/deco_tit.png);
+				content: '';
+			}
+		} //end of h2
+	} //end of header ~ section
+
+	> #aboutme {
+		> .container {
+			display: flex;
+			flex-direction: row-reverse;
+			padding-bottom: 30px;
+
+			@media #{$mobile} {
+				display: block;
+				padding-bottom: 0;
+			}
+			> .profile {
+				width: 33.3333%;
+
+				@media #{$mobile} {
+					width: 100%;
+				}
+				> div {
+					position: relative;
+					width: 360px;
+					margin: 0 auto;
+					border: 1px solid darken($sec-color-3, 10%);
+					border-radius: 0 0 10px 10px;
+
+					@media #{$mobile} {
+						width: 95%;
+						margin-top: 50px;
+					}
+					&:after {
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: -3px;
+						width: 100%;
+						height: 20px;
+						border-bottom: 1px solid darken($sec-color-3, 10%);
+						border-radius: 0 0 10px 10px;
+						content: '';
+					}
+					> .myphoto {
+						overflow: hidden;
+						background-image: url(./../images/aboutme/photo-frame.png);
+						background-position: 0 bottom;
+						background-size: contain;
+						background-repeat: no-repeat;
+
+						> img {
+							display: block;
+							position: relative;
+							z-index: -1;
+							width: 120%;
+							margin: -100px 0 0 -30px;
+
+							@media #{$mobile} {
+								display: block;
+								padding-bottom: 0;
+							}
+						}
+					} //end of .myphoto
+
+					> ol {
+						padding: 0 20px;
+
+						> li {
+							height: 45px;
+							font-weight: 300;
+							font-size: 16px;
+							line-height: 45px;
+							border-bottom: 1px solid $sec-color-3;
+
+							&:last-child {
+								border-bottom-width: 0;
+							}
+						}
+					} //end of ol
+				} //end of div
+			} //end of .profile
+
+			> .biography {
+				width: 66.66666%;
+
+				@media #{$mobile} {
+					width: 100%;
+					margin-top: 48px;
+				}
+				> .detail {
+					margin-bottom: 64px;
+					padding-left: 10%;
+					// border: 1px solid #000;
+
+					@media #{$mobile} {
+						padding: 0 5%;
+					}
+
+					> h3 {
+						margin-bottom: 30px;
+						font-weight: 500;
+						font-size: 32px;
+					}
+
+					> p {
+						margin-bottom: 20px;
+						font-weight: 300;
+						font-size: 14px;
+
+						@media #{$mobile} {
+							line-height: 1.4;
+							> br {
+								display: none;
+							}
+						}
+
+						> mark {
+							background-color: $point-color-2;
+						}
+					} //end of p
+
+					> .ican {
+						margin-top: 80px;
+
+						@media #{$mobile} {
+							margin-top: 50px;
+						}
+						> li {
+							font-size: 16px;
+							line-height: 40px;
+
+							&:before {
+								margin-right: 10px;
+								color: $pri-color-2;
+								font-family: 'Font Awesome 5 Free';
+								content: '\f14a';
+							}
+						}
+					} //end of .ican
+				} //end of .detail
+			} //end of .biography
+		} //end of .container
+	} //end of #aboutme
 
 	> footer {
 		min-width: 1200px;
 
 		@media #{$mobile} {
-			width: 100%;
+			min-width: 100%;
 		}
+
 		> .working {
 			border-top: 1px solid $sec-color-3;
 
@@ -389,6 +529,7 @@ $mobile: 'screen and (max-width:640px)';
 				}
 			} //end of p
 		} //end of .working
+
 		> .info {
 			background-color: darken($sec-color-2, 10%);
 
@@ -405,6 +546,7 @@ $mobile: 'screen and (max-width:640px)';
 					> a {
 						color: #aaa;
 					}
+
 					> .bar {
 						margin: 0 10px;
 					}
@@ -438,7 +580,7 @@ $mobile: 'screen and (max-width:640px)';
 	> aside {
 		display: none;
 		position: fixed;
-		right: 1rem; //rem은 무조건 16px
+		right: 1rem;
 		bottom: 1rem;
 		z-index: 1000;
 
