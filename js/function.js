@@ -5,7 +5,7 @@ $(function () {
 	$loading.delay(250).fadeOut(800);
 });
 
-//
+//메뉴, 스크롤
 $(function () {
 	const $h1 = $('h1');
 	const $home = $('#home');
@@ -130,4 +130,24 @@ $(function () {
 				scrollTop: 0,
 			});
 		});
+});
+
+//ability 영역
+$(function () {
+	$(window).on('scroll', function () {
+		const scrollTop = $(this).scrollTop();
+
+		// ex) (~.offset().top이 3000이라면)3000 - 1000(브라우저 높이 값) + 400 = 2400(2400정도 내려왔을 때 보이게 하라)
+		if (scrollTop > $('#ability').offset().top - window.innerHeight + 400) {
+			$('#ability .bar').each(function () {
+				$(this).width($(this).children('span').text());
+			});
+		} else if (scrollTop < $('#ability').offset().top - window.innerHeight) {
+			$('#ability .bar').width(0); //막대그래프 리셋(스크롤 올렸다가 다시 내려도 재작동)
+		}
+
+		// if (scrollTop < $('#ability').offset().top + window.innerHeight) {
+		// 	$('#ability .bar').width(0); //막대그래프 리셋(스크롤 내렸다올려도 재작동)
+		// }
+	});
 });

@@ -18,6 +18,11 @@ $point-color-2: #fcf8e3;
 	transform: translate(0, -50%);
 }
 
+@mixin imgBasic {
+	display: block;
+	width: 100%;
+}
+
 $mobile: 'screen and (max-width:640px)';
 
 #wrap {
@@ -350,6 +355,7 @@ $mobile: 'screen and (max-width:640px)';
 		padding-top: 80px;
 
 		> h2 {
+			margin-bottom: 72px;
 			color: $pri-color-1;
 			font-size: 50px;
 			line-height: 50px;
@@ -504,6 +510,234 @@ $mobile: 'screen and (max-width:640px)';
 			} //end of .biography
 		} //end of .container
 	} //end of #aboutme
+
+	> #skill {
+		> article {
+			&.skill-1 {
+				margin-bottom: 120px;
+			}
+
+			> h3 {
+				margin-bottom: 80px;
+				font-weight: 400;
+				font-size: 32px;
+				line-height: 48px;
+				text-align: center;
+
+				> span {
+					display: block;
+				}
+			} //end of h3
+
+			> ol {
+				display: flex;
+				justify-content: space-between;
+
+				@media #{$mobile} {
+					display: block;
+					width: 90%;
+					margin: 0 auto;
+				}
+				> li {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					width: 45%; //부모의 45% 라는 뜻
+					height: 150px;
+					background-repeat: no-repeat;
+					box-sizing: border-box;
+
+					@media #{$mobile} {
+						width: 100%;
+
+						&:first-child {
+							margin-bottom: 40px;
+						}
+					}
+
+					> h4 {
+						margin-bottom: 30px;
+						font-weight: 400;
+						font-size: 24px;
+					}
+
+					> p {
+						line-height: 1.6;
+					}
+				} //end of li
+			} //end of ol
+
+			&.skill-1 li:first-child {
+				padding-left: 360px;
+				background-image: url(./../images/skill/skill01.png);
+				background-position: 180px 0;
+
+				@media #{$mobile} {
+					padding-left: 180px;
+					background-position: 0 0;
+				}
+			}
+			&.skill-1 li:last-child {
+				padding-left: 180px;
+				background-image: url(./../images/skill/skill02.png);
+			}
+
+			&.skill-2 li:first-child {
+				padding-left: 360px;
+				background-image: url(./../images/skill/skill03.png);
+				background-position: 180px 0;
+
+				@media #{$mobile} {
+					padding-left: 180px;
+					background-position: 0 0;
+				}
+			}
+			&.skill-2 li:last-child {
+				padding-left: 180px;
+				background-image: url(./../images/skill/skill04.png);
+			}
+		} //end of article
+	} //end of #skill
+
+	> #ability {
+		margin-top: 100px;
+		background-color: darken($sec-color-2, 10%);
+
+		> h2 {
+			color: $pri-color-3;
+		}
+
+		> .ability-container {
+			padding-bottom: 50px;
+
+			> .stick {
+				display: flex;
+				justify-content: space-around;
+
+				@media #{$mobile} {
+					display: block;
+				}
+				> .stick-container {
+					width: 43%;
+
+					@media #{$mobile} {
+						width: 100%;
+					}
+					> .item {
+						display: flex;
+						flex-flow: row nowrap;
+						margin-bottom: 40px;
+
+						@media #{$mobile} {
+							padding: 0 7%;
+						}
+						> h3 {
+							width: 17%;
+							padding-right: 8%;
+							color: $pri-color-3;
+							font-weight: 600;
+							line-height: 10px;
+							text-align: right;
+
+							@media #{$mobile} {
+								font-size: 15px;
+							}
+						}
+
+						> .progress {
+							position: relative;
+							width: 75%;
+							height: 10px;
+							background-color: $sec-color-2;
+							border-radius: 3px;
+
+							> .bar {
+								// width: 95%;
+								width: 0; //js에서 동적으로 값 할당
+								height: 100%;
+								background-color: $pri-color-2;
+								transition: all 2s ease-in-out;
+								> span {
+									position: absolute;
+									right: 15px;
+									top: -20px;
+									color: $pri-color-3;
+								}
+							} //end of .bar
+						} //end of .progress
+					} //end of .item
+				} //end of .stick-container
+			} //end of .stick
+		} //end of .ability-container
+
+		> .resume {
+			padding: 50px 0;
+			background-color: $pri-color-3;
+
+			> div {
+				display: flex;
+				justify-content: center;
+				padding: 0 30px;
+
+				@media #{$mobile} {
+					display: block;
+				}
+				> .frame {
+					overflow: hidden;
+					width: 530px;
+					height: 540px;
+					margin-right: 50px;
+					border: 1px solid #000;
+
+					@media #{$mobile} {
+						width: 100%;
+						height: auto;
+						margin-right: 0;
+						margin-bottom: 10px;
+					}
+					> img {
+						@include imgBasic;
+					}
+				}
+				> .iam {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					> p {
+						line-height: 1.8;
+
+						@media #{$mobile} {
+							> br {
+								display: none;
+							}
+						}
+
+						> span {
+							display: block;
+
+							@media #{$mobile} {
+								display: inline;
+							}
+						}
+					}
+
+					> a {
+						display: block;
+						width: 260px;
+						height: 40px;
+						color: $pri-color-3;
+						line-height: 40px;
+						text-align: center;
+						background-color: darken($sec-color-2, 10%);
+
+						@media #{$mobile} {
+							display: none;
+						}
+					}
+				} //end of .iam
+			} //end of div
+		} //end of .resume
+	} //end of #ability
 
 	> footer {
 		min-width: 1200px;
