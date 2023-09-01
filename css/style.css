@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #wrap {
   position: relative;
   min-width: 1200px;
@@ -668,6 +669,94 @@
   #wrap > #ability > .resume > div > .iam > a {
     display: none;
   }
+}
+#wrap > #uxdesign {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wrap > #uxdesign > .slides {
+  overflow: hidden;
+  position: relative;
+  height: 440px;
+}
+#wrap > #uxdesign > .slides > .slides-container {
+  display: flex;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 400%;
+  /*
+
+      첫번째 슬라이드 left : -000% = -100% * 0
+      두번째 슬라이드 left : -100% = -100% * 1
+      세번째 슬라이드 left : -200% = -100% * 2
+      네번째 슬라이드 left : -300% = -100% * 3
+
+  */
+}
+#wrap > #uxdesign > .slides > .slides-container > li {
+  width: 25%;
+  height: 440px;
+  text-indent: -9999px;
+  background-position: center center;
+  background-size: cover;
+}
+#wrap > #uxdesign > .slides > .slides-container > li.banner_1 {
+  background-image: url(./../images/uxdesign/slides/slide_1.png);
+}
+#wrap > #uxdesign > .slides > .slides-container > li.banner_2 {
+  background-image: url(./../images/uxdesign/slides/slide_2.jpg);
+}
+#wrap > #uxdesign > .slides > .slides-container > li.banner_3 {
+  background-image: url(./../images/uxdesign/slides/slide_3.jpg);
+}
+#wrap > #uxdesign > .slides > .slides-container > li.banner_4 {
+  background-image: url(./../images/uxdesign/slides/slide_4.jpg);
+}
+#wrap > #uxdesign > .slides > .slides-pagination {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  width: 110px;
+  transform: translate(-50%, 0);
+}
+#wrap > #uxdesign > .slides > .slides-pagination > li {
+  width: 18px;
+  background-image: url(./../images/uxdesign/slides/bul.png);
+}
+#wrap > #uxdesign > .slides > .slides-pagination > li:hover, #wrap > #uxdesign > .slides > .slides-pagination > li.on {
+  background-position: 0 -18px;
+}
+#wrap > #uxdesign > .slides > .slides-pagination > li > a {
+  display: block;
+  height: 18px;
+  text-indent: -9999px;
+}
+#wrap > #uxdesign > .slides > .slides-navigation {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 100px;
+  text-indent: -9999px;
+  background-image: url(./../images/uxdesign/slides/btn_navigation.png);
+  transform: translate(0, -50%);
+}
+#wrap > #uxdesign > .slides > .slides-navigation.slides-prev {
+  left: 0;
+  background-position: -5px -225px;
+}
+#wrap > #uxdesign > .slides > .slides-navigation.slides-prev:hover {
+  background-position: -5px -335px;
+}
+#wrap > #uxdesign > .slides > .slides-navigation.slides-next {
+  right: 0;
+  background-position: -5px -5px;
+}
+#wrap > #uxdesign > .slides > .slides-navigation.slides-next:hover {
+  background-position: -5px -115px;
 }
 #wrap > footer {
   min-width: 1200px;

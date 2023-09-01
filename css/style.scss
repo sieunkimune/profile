@@ -739,6 +739,103 @@ $mobile: 'screen and (max-width:640px)';
 		} //end of .resume
 	} //end of #ability
 
+	> #uxdesign {
+		width: 1200px;
+		margin: 0 auto;
+
+		> .slides {
+			overflow: hidden;
+			position: relative;
+			height: 440px;
+
+			> .slides-container {
+				display: flex;
+				position: absolute;
+				left: 0%;
+				top: 0;
+				width: 400%;
+
+				/*
+
+				    첫번째 슬라이드 left : -000% = -100% * 0
+				    두번째 슬라이드 left : -100% = -100% * 1
+				    세번째 슬라이드 left : -200% = -100% * 2
+				    네번째 슬라이드 left : -300% = -100% * 3
+				
+				*/
+				> li {
+					width: 25%;
+					height: 440px;
+					text-indent: -9999px;
+					background-position: center center;
+					background-size: cover;
+
+					&.banner_1 {
+						background-image: url(./../images/uxdesign/slides/slide_1.png);
+					}
+					&.banner_2 {
+						background-image: url(./../images/uxdesign/slides/slide_2.jpg);
+					}
+					&.banner_3 {
+						background-image: url(./../images/uxdesign/slides/slide_3.jpg);
+					}
+					&.banner_4 {
+						background-image: url(./../images/uxdesign/slides/slide_4.jpg);
+					}
+				} //end of li
+			} //end of .slides-container
+			> .slides-pagination {
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				left: 50%;
+				bottom: 15px;
+				width: 110px;
+				transform: translate(-50%, 0);
+				> li {
+					width: 18px;
+					background-image: url(./../images/uxdesign/slides/bul.png);
+
+					&:hover,
+					&.on {
+						background-position: 0 -18px;
+					}
+
+					> a {
+						display: block;
+						height: 18px;
+						text-indent: -9999px;
+					}
+				} //end of li
+			} //end of .slides-pagination
+
+			> .slides-navigation {
+				display: block;
+				position: absolute;
+				top: 50%;
+				width: 80px;
+				height: 100px;
+				text-indent: -9999px;
+				background-image: url(./../images/uxdesign/slides/btn_navigation.png);
+				transform: translate(0, -50%);
+				&.slides-prev {
+					left: 0;
+					background-position: -5px -225px;
+					&:hover {
+						background-position: -5px -335px;
+					}
+				}
+				&.slides-next {
+					right: 0;
+					background-position: -5px -5px;
+					&:hover {
+						background-position: -5px -115px;
+					}
+				}
+			} //end of .slides-navigation
+		} //end of .slides
+	} //end of #uxdesign
+
 	> footer {
 		min-width: 1200px;
 

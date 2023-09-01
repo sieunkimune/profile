@@ -151,3 +151,70 @@ $(function () {
 		// }
 	});
 });
+
+//uxdesign 영역
+$(function () {
+	const $container = $('#uxdesign>.slides>.slides-container');
+	const $indicator = $('#uxdesign>.slides>.slides-pagination>li>a');
+	const btnPrev = $('#uxdesign>.slides>.slides-prev');
+	const btnNext = $('#uxdesign>.slides>.slides-next');
+
+	let nowIdx = 0;
+
+	let aniChk = false; //'현재 애니메이트 중이 아님'을 의미 //차단기 변수
+
+	btnNext.on('click', function (evt) {
+		evt.preventDefault();
+
+		if (!aniChk) {
+			aniChk = !aniChk; //애니메이트 중
+
+			if (nowIdx < $indicator.length - 1) {
+				nowIdx++;
+			} else {
+				nowIdx = 0;
+			}
+
+			$container.stop().animate({ left: '-100%' }, 400, 'easeInOutCubic', function () {
+				const $slides = $('#uxdesign>.slides>.slides-container>li');
+				$slides.first().appendTo($container); //마지막 자식으로 li를 이동
+				$container.css({ left: 0 });
+				aniChk = !aniChk;
+			});
+
+			$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+		}
+	});
+
+	btnPrev.on('click', function (evt) {
+		evt.preventDefault();
+
+		if (!aniChk) {
+			aniChk = !aniChk;
+
+			if (nowIdx > 0) {
+				nowIdx--;
+			} else {
+				nowIdx = $indicator.length - 1;
+			}
+
+			const $slides = $('#uxdesign>.slides>.slides-container>li');
+			$slides.last().prependTo($container);
+			$container.css({ left: '-100%' });
+			$container.stop().animate({ left: 0 });
+			aniChk = !aniChk;
+
+			$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+		}
+	});
+
+	$indicator.on('click', function (evt) {
+		evt.preventDefault();
+		nowIdx = $indicator.index(this);
+		$container.stop().animate({
+			left: -100 * nowIdx + '%',
+		});
+
+		$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+	});
+});
