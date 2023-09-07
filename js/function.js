@@ -156,14 +156,14 @@ $(function () {
 $(function () {
 	const $container = $('#uxdesign>.slides>.slides-container');
 	const $indicator = $('#uxdesign>.slides>.slides-pagination>li>a');
-	const btnPrev = $('#uxdesign>.slides>.slides-prev');
-	const btnNext = $('#uxdesign>.slides>.slides-next');
+	const $btnPrev = $('#uxdesign>.slides>.slides-prev');
+	const $btnNext = $('#uxdesign>.slides>.slides-next');
 
 	let nowIdx = 0;
 
 	let aniChk = false; //'현재 애니메이트 중이 아님'을 의미 //차단기 변수
 
-	btnNext.on('click', function (evt) {
+	$btnNext.on('click', function (evt) {
 		evt.preventDefault();
 
 		if (!aniChk) {
@@ -186,7 +186,7 @@ $(function () {
 		}
 	});
 
-	btnPrev.on('click', function (evt) {
+	$btnPrev.on('click', function (evt) {
 		evt.preventDefault();
 
 		if (!aniChk) {
@@ -217,4 +217,10 @@ $(function () {
 
 		$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
 	});
+
+	//3초마다 자동실행 - 인터벌, 다음번인덱스, 이동, 활성화표시
+	//다음버튼에 클릭이벤트 트리거 설정
+	setInterval(function () {
+		$btnNext.trigger('click'); //이벤트 강제발생
+	}, 3000);
 });

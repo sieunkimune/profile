@@ -674,6 +674,12 @@
   width: 1200px;
   margin: 0 auto;
 }
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign {
+    width: 100%;
+    margin: 0;
+  }
+}
 #wrap > #uxdesign > .slides {
   overflow: hidden;
   position: relative;
@@ -704,14 +710,34 @@
 #wrap > #uxdesign > .slides > .slides-container > li.banner_1 {
   background-image: url(./../images/uxdesign/slides/slide_1.png);
 }
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .slides > .slides-container > li.banner_1 {
+    background-image: url(./../images/uxdesign/slides/rwd_slide_1.png);
+  }
+}
 #wrap > #uxdesign > .slides > .slides-container > li.banner_2 {
   background-image: url(./../images/uxdesign/slides/slide_2.jpg);
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .slides > .slides-container > li.banner_2 {
+    background-image: url(./../images/uxdesign/slides/rwd_slide_2.png);
+  }
 }
 #wrap > #uxdesign > .slides > .slides-container > li.banner_3 {
   background-image: url(./../images/uxdesign/slides/slide_3.jpg);
 }
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .slides > .slides-container > li.banner_3 {
+    background-image: url(./../images/uxdesign/slides/rwd_slide_3.png);
+  }
+}
 #wrap > #uxdesign > .slides > .slides-container > li.banner_4 {
   background-image: url(./../images/uxdesign/slides/slide_4.jpg);
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .slides > .slides-container > li.banner_4 {
+    background-image: url(./../images/uxdesign/slides/rwd_slide_4.png);
+  }
 }
 #wrap > #uxdesign > .slides > .slides-pagination {
   display: flex;
@@ -757,6 +783,293 @@
 }
 #wrap > #uxdesign > .slides > .slides-navigation.slides-next:hover {
   background-position: -5px -115px;
+}
+#wrap > #uxdesign > .intro {
+  padding: 80px 0 104px;
+}
+#wrap > #uxdesign > .intro > h3 {
+  position: relative;
+  margin-bottom: 56px;
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > h3 {
+    line-height: 1.4;
+  }
+  #wrap > #uxdesign > .intro > h3 > span {
+    display: block;
+    height: 0;
+    text-indent: -9999px;
+  }
+}
+#wrap > #uxdesign > .intro > h3:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 86px;
+  background-image: url(./../images/decoBlockTransparent.png);
+  content: "";
+}
+#wrap > #uxdesign > .intro > h3:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 156px;
+  width: 58px;
+  height: 156px;
+  background-image: url(./../images/decoBlockBlue.png);
+  content: "";
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > h3:after, #wrap > #uxdesign > .intro > h3:before {
+    display: none;
+  }
+}
+#wrap > #uxdesign > .intro > p {
+  width: 664px;
+  margin: 0 auto 80px;
+  line-height: 2;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > p {
+    width: 90%;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+}
+#wrap > #uxdesign > .intro > p > span {
+  display: block;
+  margin-bottom: 30px;
+}
+#wrap > #uxdesign > .intro > .bus-alarm {
+  display: flex;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > .bus-alarm {
+    flex-direction: column-reverse;
+  }
+}
+#wrap > #uxdesign > .intro > .bus-alarm > h4 {
+  align-self: flex-end;
+  width: 43%;
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > .bus-alarm > h4 {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+#wrap > #uxdesign > .intro > .bus-alarm > .frame {
+  width: 527px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .intro > .bus-alarm > .frame {
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+}
+#wrap > #uxdesign > .intro > .bus-alarm > .frame > img {
+  display: block;
+  width: 100%;
+}
+#wrap > #uxdesign > .uxui {
+  width: 1200px;
+  padding-bottom: 104px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui {
+    width: 100%;
+  }
+}
+#wrap > #uxdesign > .uxui > h3 {
+  position: relative;
+  width: 330px;
+  margin: 0 auto 156px;
+  padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 2px solid #d5d5d5;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > h3 {
+    margin-bottom: 50px;
+  }
+}
+#wrap > #uxdesign > .uxui > h3:after, #wrap > #uxdesign > .uxui > h3:before {
+  position: absolute;
+  top: 130px;
+  color: #52b3d9;
+  font-weight: 800;
+  font-size: 36px;
+}
+#wrap > #uxdesign > .uxui > h3:before {
+  left: 50%;
+  margin-left: -200px;
+  content: "UX";
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > h3:before {
+    top: 210px;
+    width: 40px;
+    margin-left: -20px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+#wrap > #uxdesign > .uxui > h3:after {
+  right: 50%;
+  margin-right: -200px;
+  content: "UI";
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > h3:after {
+    top: 520px;
+    width: 40px;
+    margin-right: -20px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case {
+    flex-direction: column;
+    width: 40%;
+  }
+  #wrap > #uxdesign > .uxui > .container > .uxui-case:first-child {
+    margin-right: 30px;
+  }
+  #wrap > #uxdesign > .uxui > .container > .uxui-case:last-child {
+    margin-left: 30px;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case:hover > .ui-frame {
+  left: 0;
+  margin-left: 0;
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case:hover > .ux-frame {
+  right: 0;
+  margin-right: 0;
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case:nth-of-type(2) {
+  margin-top: 30px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case:nth-of-type(2) {
+    margin-top: 0;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > dl {
+  order: 200;
+  width: 40%;
+  height: 280px;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+  background-color: #d5d5d5;
+  box-sizing: border-box;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > dl {
+    width: 100%;
+    padding: 80px 10px 0;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dt {
+  margin-bottom: 30px;
+  color: #4d4d4d;
+  font-size: 20px;
+  font-weight: 600;
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dd {
+  color: #4d4d4d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dd > br {
+    display: none;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame {
+  order: 100;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 420px;
+  height: 280px;
+  margin-left: -420px;
+  transition: all 0.3s ease-out;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame {
+    position: initial;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 140px 0 0 140px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame > img {
+    border-radius: 150px 150px 0 0;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame {
+  order: 300;
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  width: 420px;
+  height: 280px;
+  margin-right: -420px;
+  transition: all 0.3s ease-out;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame {
+    position: initial;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+#wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 140px 140px 0;
+}
+@media screen and (max-width:640px) {
+  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame > img {
+    border-radius: 0 0 150px 150px;
+  }
 }
 #wrap > footer {
   min-width: 1200px;
