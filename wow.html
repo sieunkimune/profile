@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WOW</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/animate.css" />
+		<style>
+			#wrap {
+				width: 980px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			h1 {
+				margin-top: 60px;
+			}
+
+			section {
+				height: 300px;
+				margin: 60px 0;
+				line-height: 1.5;
+			}
+
+			.purple {
+				background-color: #9b59b6;
+			}
+			.blue {
+				background-color: #3498db;
+			}
+			.green {
+				background-color: #2ecc71;
+			}
+		</style>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/wow.min.js"></script>
+		<script>
+			$(function () {
+				new WOW().init(); //WOW 플러그인을 사용하기 위한 가장 간결한 구문
+			});
+
+			/*
+            와우 플러그인 적용단계
+
+            1. 적용할 박스에 wow 클래스를 붙인다.
+            2. 적용할 효과클래스(ex: fadeInUp)를 붙인다.
+            3. 자바스크립트에서 new WOW().init(); 실행
+            4. 상업적으로 사용하지만 않으면 무료
+            5. data-wow-delay="2000ms"는 2초 후에 동작한다는 의미
+            */
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<h1 class="text-center">WOW 플러그인 사용법</h1>
+			</header>
+
+			<section class="green wow bounceOut"></section>
+			<section class="blue wow rubberBand" data-wow-delay="2000ms"></section>
+			<section class="purple wow tada"></section>
+			<section class="green wow heartBeat"></section>
+			<section class="blue wow fadeInUp"></section>
+			<section class="purple wow rotateIn"></section>
+		</div>
+	</body>
+</html>

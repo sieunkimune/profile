@@ -3,6 +3,11 @@ $(function () {
 	const $loading = $('.loading');
 	$loading.children('p').fadeOut();
 	$loading.delay(250).fadeOut(800);
+
+	//load 이벤트는 화면에 데이터가 출력이 완료 된 시점에 발생한다.
+	$(window).on('load', function () {
+		new WOW().init();
+	});
 });
 
 //메뉴, 스크롤
@@ -223,4 +228,100 @@ $(function () {
 	setInterval(function () {
 		$btnNext.trigger('click'); //이벤트 강제발생
 	}, 3000);
+});
+
+//portfolio 영역
+$(function () {
+	const $slides = $('#portfolio figure');
+	const $indicator = $('#portfolio .slides-pagination a');
+	const $btnPrev = $('#portfolio .slides-prev');
+	const $btnNext = $('#portfolio .slides-next');
+
+	let nowIdx = 0;
+	let oldIdx = nowIdx;
+
+	const fadeFn = function () {
+		$slides.eq(oldIdx).stop().fadeOut(200);
+		$slides.eq(nowIdx).stop().fadeIn(200).css({ display: 'flex' });
+
+		//인디케이터 활성화
+		$indicator.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
+	};
+
+	$indicator.on('click', function (evt) {
+		evt.preventDefault();
+
+		oldIdx = nowIdx;
+		nowIdx = $indicator.index(this);
+
+		fadeFn();
+	});
+
+	$btnPrev.on('click', function (evt) {
+		evt.preventDefault();
+
+		oldIdx = nowIdx;
+		if (nowIdx > 0) {
+			nowIdx--;
+		} else {
+			nowIdx = $indicator.length - 1;
+		}
+
+		fadeFn();
+	});
+
+	$btnNext.on('click', function (evt) {
+		evt.preventDefault();
+
+		oldIdx = nowIdx;
+		if (nowIdx < $indicator.length - 1) {
+			nowIdx++;
+		} else {
+			nowIdx = 0;
+		}
+
+		fadeFn();
+	});
+
+	//작업과정 라이트박스
+	const $btnProc = $('#portfolio .proc');
+	const $shadow = $('#portfolio .shadow');
+	const $btnClse = $shadow.children('.clse');
+
+	$btnProc.on('click', function (evt) {
+		evt.preventDefault();
+
+		$shadow.show();
+	});
+	$btnClse.on('click', function () {
+		$shadow.hide();
+	});
+
+	//그림자영역 클릭시 닫힘
+	$shadow.on('click', function () {
+		$(this).hide();
+	});
+
+	//이벤트 전파 차단
+	$shadow.children('.lightbox').on('click', function (evt) {
+		evt.stopPropagation();
+	});
+
+	//ESC키로 닫기
+	$(document).on('keyup', function (evt) {
+		if (evt.which === 27) {
+			$shadow.hide();
+		}
+	});
+});
+
+//contact 영역
+$(function () {
+	const $tit = $('#contact dt > a');
+
+	$tit.on('click', function (evt) {
+		evt.preventDefault();
+
+		$(this).parent().toggleClass('on').next().slideToggle(150);
+	});
 });
