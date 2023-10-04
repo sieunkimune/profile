@@ -106,8 +106,8 @@ $mobile: 'screen and (max-width:640px)';
 			.neon {
 				color: #fff;
 				font-size: 60px;
-				text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
-					0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+				text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #d42598, 0 0 30px #d42598,
+					0 0 40px #d42598, 0 0 55px #d42598, 0 0 75px #d42598;
 
 				@media #{$mobile} {
 					margin-top: 30px;
@@ -135,13 +135,14 @@ $mobile: 'screen and (max-width:640px)';
 
 			> .myico {
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
 				width: 320px;
 				margin: 40px auto 0;
 
 				@media #{$mobile} {
 					margin-top: 80px;
 				}
+
 				> span {
 					display: block;
 					width: 40px;
@@ -151,18 +152,20 @@ $mobile: 'screen and (max-width:640px)';
 					transition: all 0.4s;
 
 					&:hover {
-						background-color: $pri-color-2;
+						background-color: #a465c8;
 						border-color: transparent;
 						cursor: pointer;
 					}
-					> i {
-						display: block;
-						height: 40px;
-						line-height: 40px;
-						text-align: center;
-						color: $pri-color-3;
-						font-size: 18px;
-						transform: rotate(-45deg);
+					> a {
+						> i {
+							display: block;
+							height: 40px;
+							line-height: 40px;
+							text-align: center;
+							color: $pri-color-3;
+							font-size: 18px;
+							transform: rotate(-45deg);
+						}
 					}
 				}
 			} //end of .myico

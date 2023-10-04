@@ -72,7 +72,7 @@
 #wrap > #home > .intro .neon {
   color: #fff;
   font-size: 60px;
-  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #d42598, 0 0 30px #d42598, 0 0 40px #d42598, 0 0 55px #d42598, 0 0 75px #d42598;
 }
 @media screen and (max-width:640px) {
   #wrap > #home > .intro .neon {
@@ -99,7 +99,7 @@
 }
 #wrap > #home > .intro > .myico {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 320px;
   margin: 40px auto 0;
 }
@@ -117,11 +117,11 @@
   transition: all 0.4s;
 }
 #wrap > #home > .intro > .myico > span:hover {
-  background-color: #52b3d9;
+  background-color: #a465c8;
   border-color: transparent;
   cursor: pointer;
 }
-#wrap > #home > .intro > .myico > span > i {
+#wrap > #home > .intro > .myico > span > a > i {
   display: block;
   height: 40px;
   line-height: 40px;
