@@ -80,7 +80,7 @@ $mobile: 'screen and (max-width:640px)';
 
 		@media #{$mobile} {
 			background-image: url(./../images/visual.jpg);
-			background-position: center center;
+			background-position: -700px center;
 			background-repeat: no-repeat;
 		}
 		&:before {
@@ -97,36 +97,34 @@ $mobile: 'screen and (max-width:640px)';
 			top: 35%;
 			width: 100%;
 			text-align: center;
-			// border: 1px solid #fff;
 
 			@media #{$mobile} {
 				top: 25%;
 				padding-bottom: 30px;
 			}
-			> h2 {
-				color: $pri-color-2;
+
+			.neon {
+				color: #fff;
 				font-size: 60px;
-				line-height: 80px;
+				text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+					0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 
 				@media #{$mobile} {
+					margin-top: 30px;
 					font-size: 38px;
 					line-height: 50px;
 				}
-
-				> span {
-					color: #55af61;
-
-					@media #{$mobile} {
-						display: block;
-					}
-				}
-			} //end of h2
+			}
 
 			> p {
-				margin-top: 24px;
+				margin-top: 84px;
 				color: $pri-color-3;
 				line-height: 1.8;
 				letter-spacing: 1;
+
+				@media #{$mobile} {
+					margin-top: 50px;
+				}
 
 				> span {
 					@media #{$mobile} {
