@@ -25,10 +25,23 @@ $point-color-2: #fcf8e3;
 
 $mobile: 'screen and (max-width:640px)';
 
+body,
+html {
+	background-color: #181d31;
+	cursor: url(./../images/cursor.png) 16 16, auto;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:link {
+	cursor: url(./../images/cursor.png) 16 16, auto;
+}
+
 #wrap {
 	position: relative;
 	min-width: 1200px;
-
 	@media #{$mobile} {
 		min-width: 100%;
 	}
@@ -118,10 +131,10 @@ $mobile: 'screen and (max-width:640px)';
 
 			> p {
 				margin-top: 84px;
-				color: $pri-color-3;
+				color: #d5868e;
 				line-height: 1.8;
 				letter-spacing: 1;
-
+				font-weight: 800;
 				@media #{$mobile} {
 					margin-top: 50px;
 				}
@@ -238,8 +251,8 @@ $mobile: 'screen and (max-width:640px)';
 	header {
 		width: 100%;
 		min-width: 1200px;
-		background-color: $pri-color-3;
-		border-bottom: 1px solid $sec-color-3;
+		background-color: #181d31;
+		border-bottom: 1px solid #181d31;
 
 		@media #{$mobile} {
 			min-width: 100%;
@@ -255,19 +268,27 @@ $mobile: 'screen and (max-width:640px)';
 			position: relative;
 			height: 66px;
 			> h2 {
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,d63695+0,d68082+51,d6c19b+98 */
+				background: linear-gradient(
+					to bottom,
+					#f85032 0%,
+					#d63695 0%,
+					#d68082 51%,
+					#d6c19b 98%
+				); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 				position: absolute;
 				left: 7%;
 				@include transTop; //믹신변수 활용
-				// top: 50%;
-				background-image: url(./../images/logo.png);
-				background-repeat: no-repeat;
-				// border: 1px solid #000;
-				// transform: translate(0, -50%);
+
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
 
 				> a {
 					display: block;
 					height: 32px;
-					color: $pri-color-1;
+					color: $pri-color-3;
 					line-height: 32px;
 					text-indent: 40px;
 					text-transform: uppercase;
@@ -282,6 +303,8 @@ $mobile: 'screen and (max-width:640px)';
 					background: none;
 					border: none;
 					outline: none;
+
+					cursor: url(./../images/cursor.png) 16 16, auto;
 
 					display: block;
 					position: absolute;
@@ -307,7 +330,6 @@ $mobile: 'screen and (max-width:640px)';
 				@include transTop;
 
 				@media #{$mobile} {
-					// background-color: yellow;
 					display: none;
 					right: initial;
 					left: 0;
@@ -324,13 +346,13 @@ $mobile: 'screen and (max-width:640px)';
 					}
 					> li {
 						@media #{$mobile} {
-							background-color: $pri-color-3;
+							background-color: #181d31;
 							border-bottom: 1px solid $sec-color-3;
 						}
 						> a {
 							display: block;
 							padding: 0 15px;
-							color: darken($sec-color-3, 70%);
+							color: $pri-color-3;
 							font-weight: 500;
 							text-transform: uppercase;
 							transition: all 0.2s;
@@ -358,7 +380,7 @@ $mobile: 'screen and (max-width:640px)';
 
 		> h2 {
 			margin-bottom: 72px;
-			color: $pri-color-1;
+			color: $pri-color-3;
 			font-size: 50px;
 			line-height: 50px;
 			text-align: center;
@@ -477,7 +499,7 @@ $mobile: 'screen and (max-width:640px)';
 						margin-bottom: 20px;
 						font-weight: 300;
 						font-size: 14px;
-
+						color: $pri-color-3;
 						@media #{$mobile} {
 							line-height: 1.4;
 							> br {
@@ -514,6 +536,7 @@ $mobile: 'screen and (max-width:640px)';
 	} //end of #aboutme
 
 	> #skill {
+		color: #fff;
 		> article {
 			&.skill-1 {
 				margin-bottom: 120px;
@@ -1196,7 +1219,7 @@ $mobile: 'screen and (max-width:640px)';
 					> li {
 						overflow: hidden;
 						width: 120px;
-						border: 1px solid $sec-color-3;
+						border: 2px solid $sec-color-3;
 						border-radius: 20px;
 
 						@media #{$mobile} {
@@ -1205,13 +1228,13 @@ $mobile: 'screen and (max-width:640px)';
 
 						&:hover > a,
 						&.on > a {
-							color: $pri-color-3;
 							background-color: $pri-color-2;
 						}
 
 						> a {
 							display: block;
 							height: 40px;
+							color: $pri-color-3;
 							line-height: 40px;
 							text-align: center;
 

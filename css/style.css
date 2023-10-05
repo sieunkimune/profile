@@ -1,4 +1,18 @@
 @charset "UTF-8";
+body,
+html {
+  background-color: #181d31;
+  cursor: url(./../images/cursor.png) 16 16, auto;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:link {
+  cursor: url(./../images/cursor.png) 16 16, auto;
+}
+
 #wrap {
   position: relative;
   min-width: 1200px;
@@ -83,9 +97,10 @@
 }
 #wrap > #home > .intro > p {
   margin-top: 84px;
-  color: #ffffff;
+  color: #d5868e;
   line-height: 1.8;
   letter-spacing: 1;
+  font-weight: 800;
 }
 @media screen and (max-width:640px) {
   #wrap > #home > .intro > p {
@@ -193,8 +208,8 @@
 #wrap header {
   width: 100%;
   min-width: 1200px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eeeeee;
+  background-color: #181d31;
+  border-bottom: 1px solid #181d31;
 }
 @media screen and (max-width:640px) {
   #wrap header {
@@ -212,17 +227,20 @@
   height: 66px;
 }
 #wrap header > .container > h2 {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,d63695+0,d68082+51,d6c19b+98 */
+  background: linear-gradient(to bottom, #f85032 0%, #d63695 0%, #d68082 51%, #d6c19b 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   position: absolute;
   left: 7%;
   top: 50%;
   transform: translate(0, -50%);
-  background-image: url(./../images/logo.png);
-  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 #wrap header > .container > h2 > a {
   display: block;
   height: 32px;
-  color: #2c3e50;
+  color: #ffffff;
   line-height: 32px;
   text-indent: 40px;
   text-transform: uppercase;
@@ -235,6 +253,7 @@
     background: none;
     border: none;
     outline: none;
+    cursor: url(./../images/cursor.png) 16 16, auto;
     display: block;
     position: absolute;
     right: 7%;
@@ -279,14 +298,14 @@
 }
 @media screen and (max-width:640px) {
   #wrap header > .container > nav > .gnb > li {
-    background-color: #ffffff;
+    background-color: #181d31;
     border-bottom: 1px solid #eeeeee;
   }
 }
 #wrap header > .container > nav > .gnb > li > a {
   display: block;
   padding: 0 15px;
-  color: #3c3c3c;
+  color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
   transition: all 0.2s;
@@ -307,7 +326,7 @@
 }
 #wrap header ~ section > h2 {
   margin-bottom: 72px;
-  color: #2c3e50;
+  color: #ffffff;
   font-size: 50px;
   line-height: 50px;
   text-align: center;
@@ -423,6 +442,7 @@
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 14px;
+  color: #ffffff;
 }
 @media screen and (max-width:640px) {
   #wrap > #aboutme > .container > .biography > .detail > p {
@@ -452,6 +472,9 @@
   color: #52b3d9;
   font-family: "Font Awesome 5 Free";
   content: "\f14a";
+}
+#wrap > #skill {
+  color: #fff;
 }
 #wrap > #skill > article.skill-1 {
   margin-bottom: 120px;
@@ -1111,7 +1134,7 @@
 #wrap > #portfolio > article.slides > .slides-pagination > li {
   overflow: hidden;
   width: 120px;
-  border: 1px solid #eeeeee;
+  border: 2px solid #eeeeee;
   border-radius: 20px;
 }
 @media screen and (max-width:640px) {
@@ -1120,12 +1143,12 @@
   }
 }
 #wrap > #portfolio > article.slides > .slides-pagination > li:hover > a, #wrap > #portfolio > article.slides > .slides-pagination > li.on > a {
-  color: #ffffff;
   background-color: #52b3d9;
 }
 #wrap > #portfolio > article.slides > .slides-pagination > li > a {
   display: block;
   height: 40px;
+  color: #ffffff;
   line-height: 40px;
   text-align: center;
 }
