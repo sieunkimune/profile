@@ -27,8 +27,7 @@ $mobile: 'screen and (max-width:640px)';
 
 body,
 html {
-	background-color: #181d31;
-	cursor: url(./../images/cursor.png) 16 16, auto;
+	cursor: url(./../images/hearts.png) 16 16, auto;
 }
 
 a,
@@ -36,10 +35,12 @@ a:hover,
 a:active,
 a:focus,
 a:link {
-	cursor: url(./../images/cursor.png) 16 16, auto;
+	cursor: url(./../images/hearts.png) 16 16, auto;
 }
 
 #wrap {
+	background: linear-gradient(palevioletred, pink);
+
 	position: relative;
 	min-width: 1200px;
 	@media #{$mobile} {
@@ -84,6 +85,10 @@ a:link {
 		text-transform: uppercase;
 		transform: translate(-50%, 0);
 		// border: 1px solid #000;
+
+		@media #{$mobile} {
+			padding-top: 30px;
+		}
 	}
 
 	> #home {
@@ -92,9 +97,10 @@ a:link {
 		transition: all 0.3s ease-in-out;
 
 		@media #{$mobile} {
-			background-image: url(./../images/visual.jpg);
-			background-position: -700px center;
+			background-image: url(./../images/image.jpg);
+			background-size: cover;
 			background-repeat: no-repeat;
+			background-position: -118px 0;
 		}
 		&:before {
 			display: block;
@@ -157,17 +163,43 @@ a:link {
 				}
 
 				> span {
+					position: relative;
 					display: block;
 					width: 40px;
-					border: 1px solid $pri-color-3;
+					height: 40px;
+					background-color: #a465c8;
 					border-radius: 3px;
 					transform: rotate(45deg);
 					transition: all 0.4s;
 
-					&:hover {
+					&:before,
+					&:after {
+						content: '';
+						width: 40px;
+						height: 40px;
+						position: absolute;
 						background-color: #a465c8;
-						border-color: transparent;
-						cursor: pointer;
+						border-radius: 50%;
+						transition: all 0.4s;
+					}
+					&:before {
+						left: -50%;
+					}
+					&:after {
+						top: -50%;
+						right: 1%;
+						z-index: -1;
+					}
+
+					&:hover {
+						background-color: #d68082;
+
+						&:before {
+							background-color: #d68082;
+						}
+						&:after {
+							background-color: #d68082;
+						}
 					}
 					> a {
 						> i {
