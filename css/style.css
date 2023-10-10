@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body,
 html {
   cursor: url(./../images/hearts.png) 16 16, auto;
@@ -65,7 +64,7 @@ a:link {
     background-image: url(./../images/image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -118px 0;
+    background-position: center center;
   }
 }
 #wrap > #home:before {
@@ -282,7 +281,7 @@ a:link {
     background: none;
     border: none;
     outline: none;
-    cursor: url(./../images/cursor.png) 16 16, auto;
+    cursor: url(./../images/hearts.png) 16 16, auto;
     display: block;
     position: absolute;
     right: 7%;
@@ -391,6 +390,7 @@ a:link {
   position: relative;
   width: 360px;
   margin: 0 auto;
+  margin-top: 5px;
   border: 1px solid #d5d5d5;
   border-radius: 10px;
 }
@@ -433,7 +433,7 @@ a:link {
 #wrap > #aboutme > .container > .profile > div > ol > li {
   height: 45px;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 45px;
   border-bottom: 1px solid #eeeeee;
 }
@@ -463,10 +463,14 @@ a:link {
   font-weight: 500;
   font-size: 32px;
 }
+#wrap > #aboutme > .container > .biography > .detail > h3:nth-of-type(2) {
+  padding-top: 50px;
+}
 #wrap > #aboutme > .container > .biography > .detail > p {
   margin-bottom: 20px;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.2;
   color: #ffffff;
 }
 @media screen and (max-width:640px) {
@@ -665,10 +669,9 @@ a:link {
 }
 #wrap > #ability > .resume > div > .frame {
   overflow: hidden;
-  width: 530px;
-  height: 540px;
+  width: 420px;
+  height: 420px;
   margin-right: 50px;
-  border: 1px solid #000;
 }
 @media screen and (max-width:640px) {
   #wrap > #ability > .resume > div > .frame {
@@ -717,124 +720,20 @@ a:link {
     display: none;
   }
 }
-#wrap > #uxdesign {
+#wrap > #react {
   width: 1200px;
   margin: 0 auto;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign {
+  #wrap > #react {
     width: 100%;
     margin: 0;
   }
 }
-#wrap > #uxdesign > .slides {
-  overflow: hidden;
-  position: relative;
-  height: 440px;
-}
-#wrap > #uxdesign > .slides > .slides-container {
-  display: flex;
-  position: absolute;
-  left: 0%;
-  top: 0;
-  width: 400%;
-  /*
-
-      첫번째 슬라이드 left : -000% = -100% * 0
-      두번째 슬라이드 left : -100% = -100% * 1
-      세번째 슬라이드 left : -200% = -100% * 2
-      네번째 슬라이드 left : -300% = -100% * 3
-
-  */
-}
-#wrap > #uxdesign > .slides > .slides-container > li {
-  width: 25%;
-  height: 440px;
-  text-indent: -9999px;
-  background-position: center center;
-  background-size: cover;
-}
-#wrap > #uxdesign > .slides > .slides-container > li.banner_1 {
-  background-image: url(./../images/uxdesign/slides/slide_1.png);
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .slides > .slides-container > li.banner_1 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_1.png);
-  }
-}
-#wrap > #uxdesign > .slides > .slides-container > li.banner_2 {
-  background-image: url(./../images/uxdesign/slides/slide_2.jpg);
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .slides > .slides-container > li.banner_2 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_2.png);
-  }
-}
-#wrap > #uxdesign > .slides > .slides-container > li.banner_3 {
-  background-image: url(./../images/uxdesign/slides/slide_3.jpg);
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .slides > .slides-container > li.banner_3 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_3.png);
-  }
-}
-#wrap > #uxdesign > .slides > .slides-container > li.banner_4 {
-  background-image: url(./../images/uxdesign/slides/slide_4.jpg);
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .slides > .slides-container > li.banner_4 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_4.png);
-  }
-}
-#wrap > #uxdesign > .slides > .slides-pagination {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  width: 110px;
-  transform: translate(-50%, 0);
-}
-#wrap > #uxdesign > .slides > .slides-pagination > li {
-  width: 18px;
-  background-image: url(./../images/uxdesign/slides/bul.png);
-}
-#wrap > #uxdesign > .slides > .slides-pagination > li:hover, #wrap > #uxdesign > .slides > .slides-pagination > li.on {
-  background-position: 0 -18px;
-}
-#wrap > #uxdesign > .slides > .slides-pagination > li > a {
-  display: block;
-  height: 18px;
-  text-indent: -9999px;
-}
-#wrap > #uxdesign > .slides > .slides-navigation {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 80px;
-  height: 100px;
-  text-indent: -9999px;
-  background-image: url(./../images/uxdesign/slides/btn_navigation.png);
-  transform: translate(0, -50%);
-}
-#wrap > #uxdesign > .slides > .slides-navigation.slides-prev {
-  left: 0;
-  background-position: -5px -225px;
-}
-#wrap > #uxdesign > .slides > .slides-navigation.slides-prev:hover {
-  background-position: -5px -335px;
-}
-#wrap > #uxdesign > .slides > .slides-navigation.slides-next {
-  right: 0;
-  background-position: -5px -5px;
-}
-#wrap > #uxdesign > .slides > .slides-navigation.slides-next:hover {
-  background-position: -5px -115px;
-}
-#wrap > #uxdesign > .intro {
+#wrap > #react > .intro {
   padding: 80px 0 104px;
 }
-#wrap > #uxdesign > .intro > h3 {
+#wrap > #react > .intro > h3 {
   position: relative;
   margin-bottom: 56px;
   font-weight: 500;
@@ -842,16 +741,16 @@ a:link {
   text-align: center;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > h3 {
+  #wrap > #react > .intro > h3 {
     line-height: 1.4;
   }
-  #wrap > #uxdesign > .intro > h3 > span {
+  #wrap > #react > .intro > h3 > span {
     display: block;
     height: 0;
     text-indent: -9999px;
   }
 }
-#wrap > #uxdesign > .intro > h3:before {
+#wrap > #react > .intro > h3:before {
   display: block;
   position: absolute;
   left: 0;
@@ -861,86 +760,50 @@ a:link {
   background-image: url(./../images/decoBlockTransparent.png);
   content: "";
 }
-#wrap > #uxdesign > .intro > h3:after {
+#wrap > #react > .intro > h3:after {
   display: block;
   position: absolute;
   right: 0;
-  top: 156px;
+  top: 136px;
   width: 58px;
   height: 156px;
   background-image: url(./../images/decoBlockBlue.png);
   content: "";
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > h3:after, #wrap > #uxdesign > .intro > h3:before {
+  #wrap > #react > .intro > h3:after, #wrap > #react > .intro > h3:before {
     display: none;
   }
 }
-#wrap > #uxdesign > .intro > p {
+#wrap > #react > .intro > p {
   width: 664px;
-  margin: 0 auto 80px;
+  margin: 0 auto;
   line-height: 2;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > p {
+  #wrap > #react > .intro > p {
     width: 90%;
     margin-bottom: 30px;
     line-height: 1.6;
   }
 }
-#wrap > #uxdesign > .intro > p > span {
+#wrap > #react > .intro > p > span {
   display: block;
   margin-bottom: 30px;
 }
-#wrap > #uxdesign > .intro > .bus-alarm {
-  display: flex;
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > .bus-alarm {
-    flex-direction: column-reverse;
-  }
-}
-#wrap > #uxdesign > .intro > .bus-alarm > h4 {
-  align-self: flex-end;
-  width: 43%;
-  margin-right: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: right;
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > .bus-alarm > h4 {
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-  }
-}
-#wrap > #uxdesign > .intro > .bus-alarm > .frame {
-  width: 527px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .intro > .bus-alarm > .frame {
-    width: 90%;
-    margin: 0 auto 10px;
-  }
-}
-#wrap > #uxdesign > .intro > .bus-alarm > .frame > img {
-  display: block;
-  width: 100%;
-}
-#wrap > #uxdesign > .uxui {
+#wrap > #react > .repro {
   width: 1200px;
   padding-bottom: 104px;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui {
+  #wrap > #react > .repro {
     width: 100%;
   }
 }
-#wrap > #uxdesign > .uxui > h3 {
+#wrap > #react > .repro > h3 {
   position: relative;
   width: 330px;
-  margin: 0 auto 156px;
+  margin: 0 auto;
   padding-bottom: 20px;
   font-size: 32px;
   font-weight: 500;
@@ -948,24 +811,24 @@ a:link {
   border-bottom: 2px solid #d5d5d5;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > h3 {
+  #wrap > #react > .repro > h3 {
     margin-bottom: 50px;
   }
 }
-#wrap > #uxdesign > .uxui > h3:after, #wrap > #uxdesign > .uxui > h3:before {
+#wrap > #react > .repro > h3:after, #wrap > #react > .repro > h3:before {
   position: absolute;
   top: 130px;
   color: #52b3d9;
   font-weight: 800;
   font-size: 36px;
 }
-#wrap > #uxdesign > .uxui > h3:before {
+#wrap > #react > .repro > h3:before {
   left: 50%;
   margin-left: -200px;
-  content: "UX";
+  content: "React";
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > h3:before {
+  #wrap > #react > .repro > h3:before {
     top: 210px;
     width: 40px;
     margin-left: -20px;
@@ -973,13 +836,13 @@ a:link {
     text-align: center;
   }
 }
-#wrap > #uxdesign > .uxui > h3:after {
+#wrap > #react > .repro > h3:after {
   right: 50%;
   margin-right: -200px;
-  content: "UI";
+  content: "Project";
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > h3:after {
+  #wrap > #react > .repro > h3:after {
     top: 520px;
     width: 40px;
     margin-right: -20px;
@@ -988,45 +851,40 @@ a:link {
   }
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container {
+  #wrap > #react > .repro > .container {
     display: flex;
     justify-content: center;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case {
+#wrap > #react > .repro > .container > .uxui-case {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
-}
-@media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case {
-    flex-direction: column;
-    width: 40%;
-  }
-  #wrap > #uxdesign > .uxui > .container > .uxui-case:first-child {
-    margin-right: 30px;
-  }
-  #wrap > #uxdesign > .uxui > .container > .uxui-case:last-child {
-    margin-left: 30px;
-  }
-}
-#wrap > #uxdesign > .uxui > .container > .uxui-case:hover > .ui-frame {
-  left: 0;
-  margin-left: 0;
-}
-#wrap > #uxdesign > .uxui > .container > .uxui-case:hover > .ux-frame {
-  right: 0;
-  margin-right: 0;
-}
-#wrap > #uxdesign > .uxui > .container > .uxui-case:nth-of-type(2) {
   margin-top: 30px;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case:nth-of-type(2) {
+  #wrap > #react > .repro > .container > .uxui-case {
+    flex-direction: column;
+    width: 40%;
     margin-top: 0;
+    margin-left: 10px;
+  }
+  #wrap > #react > .repro > .container > .uxui-case:last-child {
+    margin-right: 10px;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > dl {
+#wrap > #react > .repro > .container > .uxui-case:hover > .ui-frame {
+  left: 0;
+  margin-left: 0;
+}
+#wrap > #react > .repro > .container > .uxui-case:hover > .ux-frame {
+  right: 0;
+  margin-right: 0;
+}
+#wrap > #react > .repro > .container > .uxui-case:nth-of-type(1) {
+  margin-top: 0;
+}
+#wrap > #react > .repro > .container > .uxui-case > dl {
   order: 200;
   width: 40%;
   height: 280px;
@@ -1037,28 +895,28 @@ a:link {
   box-sizing: border-box;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > dl {
+  #wrap > #react > .repro > .container > .uxui-case > dl {
     width: 100%;
     padding: 80px 10px 0;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dt {
+#wrap > #react > .repro > .container > .uxui-case > dl > dt {
   margin-bottom: 30px;
   color: #4d4d4d;
   font-size: 20px;
   font-weight: 600;
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dd {
+#wrap > #react > .repro > .container > .uxui-case > dl > dd {
   color: #4d4d4d;
   font-size: 13px;
   line-height: 1.6;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > dl > dd > br {
+  #wrap > #react > .repro > .container > .uxui-case > dl > dd > br {
     display: none;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame {
+#wrap > #react > .repro > .container > .uxui-case > .ui-frame {
   order: 100;
   display: block;
   position: absolute;
@@ -1070,25 +928,25 @@ a:link {
   transition: all 0.3s ease-out;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame {
+  #wrap > #react > .repro > .container > .uxui-case > .ui-frame {
     position: initial;
     width: 100%;
     height: auto;
     margin: 0;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame > img {
+#wrap > #react > .repro > .container > .uxui-case > .ui-frame > img {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 140px 0 0 140px;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ui-frame > img {
+  #wrap > #react > .repro > .container > .uxui-case > .ui-frame > img {
     border-radius: 150px 150px 0 0;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame {
+#wrap > #react > .repro > .container > .uxui-case > .ux-frame {
   order: 300;
   display: block;
   position: absolute;
@@ -1100,21 +958,21 @@ a:link {
   transition: all 0.3s ease-out;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame {
+  #wrap > #react > .repro > .container > .uxui-case > .ux-frame {
     position: initial;
     width: 100%;
     height: auto;
     margin: 0;
   }
 }
-#wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame > img {
+#wrap > #react > .repro > .container > .uxui-case > .ux-frame > img {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 0 140px 140px 0;
 }
 @media screen and (max-width:640px) {
-  #wrap > #uxdesign > .uxui > .container > .uxui-case > .ux-frame > img {
+  #wrap > #react > .repro > .container > .uxui-case > .ux-frame > img {
     border-radius: 0 0 150px 150px;
   }
 }
@@ -1354,182 +1212,29 @@ a:link {
     background-image: url(./../images/portfolio/btn_next.png);
   }
 }
-#wrap > #portfolio > article.intro {
-  width: 100%;
-  background-image: url(./../images/portfolio/bg_pofol-2.png);
-  background-size: cover;
-}
-#wrap > #portfolio > article.intro > .container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 80px 0;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container {
-    width: 100%;
-  }
-}
-#wrap > #portfolio > article.intro > .container > h3 {
-  position: relative;
-  margin-bottom: 56px;
-  font-weight: 500;
-  font-size: 32px;
+#wrap > #portfolio > .circle > h1 {
   text-align: center;
 }
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > h3 {
-    line-height: 1.4;
-  }
-  #wrap > #portfolio > article.intro > .container > h3 > span {
-    display: block;
-    height: 0;
-    text-indent: -9999px;
-  }
-}
-#wrap > #portfolio > article.intro > .container > h3:before {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 48px;
-  height: 86px;
-  background-image: url(./../images/decoBlockTransparent.png);
-  content: "";
-}
-#wrap > #portfolio > article.intro > .container > h3:after {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 156px;
-  width: 58px;
-  height: 156px;
-  background-image: url(./../images/decoBlockBlue.png);
-  content: "";
+#wrap > #portfolio > .circle > h1 > img {
+  animation: rotate_image 6s linear infinite;
+  transform-origin: 50% 50%;
 }
 @media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > h3:after, #wrap > #portfolio > article.intro > .container > h3:before {
-    display: none;
+  #wrap > #portfolio > .circle > h1 > img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
   }
 }
-#wrap > #portfolio > article.intro > .container > p {
-  width: 664px;
-  margin: 0 auto 80px;
-  line-height: 2;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > p {
-    width: 90%;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-}
-#wrap > #portfolio > article.intro > .container > p > span {
-  display: block;
-  margin-bottom: 30px;
-}
-#wrap > #portfolio > article.intro > .container > .coding {
-  margin-top: 100px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding {
-    margin-top: 0;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > h4 {
-  position: relative;
-  height: 300px;
-  margin-bottom: 104px;
-  font-weight: 400;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > h4 {
-    width: 90%;
-    margin: 0 auto 50px;
-    text-align: center;
-    border: 1px solid #000;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > h4 > span {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  margin-left: -140px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > h4 > span {
-    left: 0;
-    bottom: -20px;
-    width: 100%;
-    margin: 0;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > h4:after {
-  display: block;
-  position: absolute;
-  right: 35px;
-  bottom: 0;
-  z-index: -1;
-  width: 470px;
-  height: 300px;
-  background-image: url(./../images/portfolio/code01.png);
-  content: "";
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > h4:after {
-    right: 50%;
-    width: 100%;
-    margin-right: -50%;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > div {
-  height: 436px;
-  padding-left: 550px;
-  background-image: url(./../images/portfolio/code02.png);
-  background-position: 50px 0;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > div {
-    width: 90%;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-bottom: 320px;
-    background-position: 0 bottom;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > div > h4 {
-  padding: 30px 0;
-  font-size: 32px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > div > h4 {
-    font-weight: 500;
-    font-size: 18px;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > div > p {
-  line-height: 30px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > div > p {
-    line-height: 1.6;
-  }
-  #wrap > #portfolio > article.intro > .container > .coding > div > p br {
-    display: none;
-  }
-}
-#wrap > #portfolio > article.intro > .container > .coding > div > p > span {
-  display: block;
-  margin-bottom: 30px;
-}
-@media screen and (max-width:640px) {
-  #wrap > #portfolio > article.intro > .container > .coding > div > p > span {
-    margin-bottom: 20px;
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
   }
 }
 #wrap > #contact {
   width: 1200px;
   margin: 0 auto 150px;
+  padding-top: 104px;
 }
 @media screen and (max-width:640px) {
   #wrap > #contact {
