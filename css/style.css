@@ -867,6 +867,59 @@ a:link {
   position: relative;
   margin-top: 30px;
 }
+#wrap > #react > .repro > .container > .uxui-case > img {
+  display: none;
+}
+#wrap > #react > .repro > .container > .uxui-case:hover > img {
+  position: absolute;
+  left: 50%;
+  top: -250px;
+  margin-left: 340px;
+  display: block;
+  width: 240px;
+  height: 240px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #react > .repro > .container > .uxui-case:hover > img {
+    top: -150px;
+    margin-left: -50px;
+    width: 140px;
+    height: 140px;
+  }
+}
+#wrap > #react > .repro > .container > .uxui-case:nth-of-type(2):hover > img {
+  margin-left: 400px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #react > .repro > .container > .uxui-case:nth-of-type(2):hover > img {
+    top: -150px;
+    margin-left: -50px;
+    width: 140px;
+    height: 140px;
+  }
+}
+#wrap > #react > .repro > .container > .uxui-case:nth-of-type(3):hover > img {
+  margin-left: -640px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #react > .repro > .container > .uxui-case:nth-of-type(3):hover > img {
+    top: -150px;
+    margin-left: -100px;
+    width: 140px;
+    height: 140px;
+  }
+}
+#wrap > #react > .repro > .container > .uxui-case:nth-of-type(4):hover > img {
+  margin-left: -640px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #react > .repro > .container > .uxui-case:nth-of-type(4):hover > img {
+    top: -150px;
+    margin-left: -100px;
+    width: 140px;
+    height: 140px;
+  }
+}
 #wrap > #react > .repro > .container > .uxui-case:nth-of-type(1) > a > dl {
   background-color: #bcea73;
 }
