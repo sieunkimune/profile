@@ -1553,10 +1553,6 @@ a:link {
 					display: none;
 					background-color: lighten($sec-color-3, 2%);
 
-					&:nth-of-type(1) {
-						// display: block;
-					}
-
 					.answer {
 						margin: 0 90px;
 						padding: 40px 0;
