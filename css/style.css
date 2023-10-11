@@ -1226,8 +1226,9 @@ a:link {
   #wrap > #portfolio > article.slides > .slides-container > figure > figcaption > .btn > a {
     width: 120px;
     height: 30px;
-    line-height: 30px;
+    margin: 0 auto;
     font-size: 13px;
+    line-height: 30px;
   }
 }
 #wrap > #portfolio > article.slides > .slides-container > figure > figcaption > .btn > a.proc {
