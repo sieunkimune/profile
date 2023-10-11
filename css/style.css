@@ -490,7 +490,7 @@ a:link {
   background-color: #fcf8e3;
 }
 #wrap > #aboutme > .container > .biography > .detail > .ican {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 @media screen and (max-width:640px) {
   #wrap > #aboutme > .container > .biography > .detail > .ican {
