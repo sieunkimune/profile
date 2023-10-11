@@ -1222,6 +1222,14 @@ a:link {
   border-radius: 50px;
   transition: all 0.2s;
 }
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure > figcaption > .btn > a {
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+  }
+}
 #wrap > #portfolio > article.slides > .slides-container > figure > figcaption > .btn > a.proc {
   margin-right: 10px;
   border: 1px solid #68c3a3;

@@ -1302,6 +1302,13 @@ a:link {
 									border-radius: 50px;
 									transition: all 0.2s;
 
+									@media #{$mobile} {
+										width: 120px;
+										height: 30px;
+										line-height: 30px;
+										font-size: 13px;
+									}
+
 									&.proc {
 										margin-right: 10px;
 										border: 1px solid $sec-color-1;
