@@ -941,6 +941,39 @@ a:link {
 					position: relative;
 					margin-top: 30px;
 
+					&:nth-of-type(1) > a > dl {
+						background-color: #bcea73;
+
+						@media #{$mobile} {
+							background-position: center;
+							background-image: url(./../images/uxdesign/slide_1.png);
+						}
+					}
+					&:nth-of-type(2) > a > dl {
+						background-color: #f3f374;
+
+						@media #{$mobile} {
+							background-position: center;
+							background-image: url(./../images/uxdesign/slide_2.png);
+						}
+					}
+					&:nth-of-type(3) > a > dl {
+						background-color: #d879de;
+
+						@media #{$mobile} {
+							background-position: center;
+							background-image: url(./../images/uxdesign/slide_3.png);
+						}
+					}
+					&:nth-of-type(4) > a > dl {
+						background-color: #b0c4a9;
+
+						@media #{$mobile} {
+							background-position: center;
+							background-image: url(./../images/uxdesign/slide_4.png);
+						}
+					}
+
 					@media #{$mobile} {
 						flex-direction: column;
 						width: 40%;
@@ -964,40 +997,51 @@ a:link {
 					&:nth-of-type(1) {
 						margin-top: 0;
 					}
-
-					> dl {
-						order: 200;
-						width: 40%;
+					> a {
+						width: 100%;
 						height: 280px;
 						margin: 0 auto;
-						padding-top: 100px;
-						text-align: center;
-						background-color: darken($sec-color-3, 10%);
-						box-sizing: border-box;
 
-						@media #{$mobile} {
-							width: 100%;
-							padding: 80px 10px 0;
-						}
+						> dl {
+							order: 200;
+							width: 40%;
+							height: 280px;
+							margin: 0 auto;
+							padding-top: 100px;
+							text-align: center;
+							background-color: darken($sec-color-3, 10%);
+							box-sizing: border-box;
 
-						> dt {
-							margin-bottom: 30px;
-							color: lighten($sec-color-2, 10%);
-							font-size: 20px;
-							font-weight: 600;
-						}
-						> dd {
-							color: lighten($sec-color-2, 10%);
-							font-size: 13px;
-							line-height: 1.6;
+							&:hover {
+								box-shadow: 3px 3px 3px#d42598;
+							}
 
 							@media #{$mobile} {
-								> br {
-									display: none;
+								width: 100%;
+								height: 350px;
+								padding: 80px 10px 0;
+								border-radius: 20px;
+							}
+
+							> dt {
+								margin-bottom: 30px;
+								color: lighten($sec-color-2, 10%);
+								font-size: 20px;
+								font-weight: 600;
+							}
+							> dd {
+								color: lighten($sec-color-2, 10%);
+								font-size: 13px;
+								line-height: 1.6;
+
+								@media #{$mobile} {
+									> br {
+										display: none;
+									}
 								}
 							}
-						}
-					} //end of dl
+						} //end of dl
+					} //end of a
 
 					> .ui-frame {
 						order: 100;
@@ -1011,10 +1055,7 @@ a:link {
 						transition: all 0.3s ease-out;
 
 						@media #{$mobile} {
-							position: initial;
-							width: 100%;
-							height: auto;
-							margin: 0;
+							display: none;
 						}
 
 						> img {
@@ -1041,10 +1082,7 @@ a:link {
 						transition: all 0.3s ease-out;
 
 						@media #{$mobile} {
-							position: initial;
-							width: 100%;
-							height: auto;
-							margin: 0;
+							display: none;
 						}
 
 						> img {
@@ -1315,7 +1353,7 @@ a:link {
 		} //end of article
 
 		> .circle {
-			> h1 {
+			> h2 {
 				text-align: center;
 				> img {
 					animation: rotate_image 6s linear infinite;
@@ -1414,7 +1452,7 @@ a:link {
 
 				> dt {
 					&.on {
-						background-color: $sec-color-1;
+						background-color: #181d31;
 
 						> a {
 							color: $pri-color-3;
