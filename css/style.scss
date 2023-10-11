@@ -1032,6 +1032,10 @@ a:link {
 								color: lighten($sec-color-2, 10%);
 								font-size: 20px;
 								font-weight: 600;
+
+								@media #{$mobile} {
+									font-size: 16px;
+								}
 							}
 							> dd {
 								color: lighten($sec-color-2, 10%);

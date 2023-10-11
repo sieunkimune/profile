@@ -957,6 +957,11 @@ a:link {
   font-size: 20px;
   font-weight: 600;
 }
+@media screen and (max-width:640px) {
+  #wrap > #react > .repro > .container > .uxui-case > a > dl > dt {
+    font-size: 16px;
+  }
+}
 #wrap > #react > .repro > .container > .uxui-case > a > dl > dd {
   color: #4d4d4d;
   font-size: 13px;
