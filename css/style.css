@@ -904,7 +904,7 @@ a:link {
 @media screen and (max-width:640px) {
   #wrap > #react > .repro > .container > .uxui-case:nth-of-type(3):hover > img {
     top: -150px;
-    margin-left: -100px;
+    margin-left: -88px;
     width: 140px;
     height: 140px;
   }
@@ -915,7 +915,7 @@ a:link {
 @media screen and (max-width:640px) {
   #wrap > #react > .repro > .container > .uxui-case:nth-of-type(4):hover > img {
     top: -150px;
-    margin-left: -100px;
+    margin-left: -88px;
     width: 140px;
     height: 140px;
   }
