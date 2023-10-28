@@ -1256,6 +1256,7 @@ a:link {
 							background-size: contain;
 							background-repeat: no-repeat;
 							@media #{$mobile} {
+								left: -20px;
 								width: 360px;
 								height: 198px;
 								margin: 0 auto;
