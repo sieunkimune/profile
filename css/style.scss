@@ -1450,9 +1450,10 @@ a:link {
 							background-repeat: no-repeat;
 							background-image: url(./../images/portfolio/phone.png);
 							@media #{$mobile} {
-								left: 130px;
+								left: 50%;
 								width: 550px;
 								height: 200px;
+								margin-left: -110px;
 							}
 							> img:first-child {
 								left: 127px;
