@@ -1210,7 +1210,7 @@ a:link {
 @media screen and (max-width:640px) {
   #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:nth-child(2) {
     left: 322px;
-    top: 106px;
+    top: 107px;
     width: 64px;
     height: 113px;
   }
