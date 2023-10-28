@@ -1388,9 +1388,9 @@ a:link {
 @media screen and (max-width:640px) {
   #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:first-child {
     left: 60px;
-    top: 7px;
+    top: 6px;
     width: 108px;
-    height: 188px;
+    height: 189px;
   }
 }
 #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:last-child {
