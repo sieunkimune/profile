@@ -1172,6 +1172,62 @@ a:link {
 #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(1) {
   display: flex;
 }
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame {
+  left: -30px;
+  width: 600px;
+  height: 290px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame {
+    width: 360px;
+    height: 198px;
+    margin: 0 auto;
+  }
+}
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:first-child {
+  left: 58px;
+  top: 20px;
+  width: 422px;
+  height: 230px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:first-child {
+    left: 39px;
+    top: 14px;
+    width: 285px;
+    height: 156px;
+  }
+}
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:nth-child(2) {
+  left: 474px;
+  top: 118px;
+  width: 130px;
+  height: 233px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:nth-child(2) {
+    left: 322px;
+    top: 106px;
+    width: 64px;
+    height: 113px;
+  }
+}
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:last-child {
+  left: 390px;
+  top: 110px;
+  width: 300px;
+  height: 250px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(2) > .frame > img:last-child {
+    left: 280px;
+    top: 103px;
+    width: 150px;
+    height: 121px;
+  }
+}
 #wrap > #portfolio > article.slides > .slides-container > figure > figcaption {
   width: 500px;
   padding-top: 35px;
@@ -1307,14 +1363,46 @@ a:link {
 }
 #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame {
   position: relative;
+  left: 160px;
   width: 750px;
   height: 380px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(./../images/portfolio/iphone.png);
+  background-image: url(./../images/portfolio/phone.png);
 }
-#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img {
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame {
+    left: 130px;
+    width: 550px;
+    height: 200px;
+  }
+}
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:first-child {
+  left: 127px;
+  top: 13px;
   width: 195px;
+  height: 353px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:first-child {
+    left: 60px;
+    top: 7px;
+    width: 108px;
+    height: 188px;
+  }
+}
+#wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:last-child {
+  left: 0;
+  top: 0;
+  width: 450px;
+  height: 380px;
+}
+@media screen and (max-width:640px) {
+  #wrap > #portfolio > article.slides > .slides-container > figure:nth-of-type(3) > .frame > img:last-child {
+    left: -10px;
+    width: 250px;
+    height: 202px;
+  }
 }
 #wrap > #portfolio > article.slides > .slides-navigation {
   display: none;
